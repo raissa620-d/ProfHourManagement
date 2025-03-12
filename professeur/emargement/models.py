@@ -10,6 +10,7 @@ class Enseignant(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)  # Liaison avec le modèle User (authentification)
     matiere = models.CharField(max_length=100)
     classe_filiere = models.CharField(max_length=100)
+    print()
 
     def __str__(self):
         return f"{self.user.first_name} {self.user.last_name}"
